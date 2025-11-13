@@ -1,0 +1,39 @@
+/* GLOBAL RESET */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+body { min-height:100vh; display:flex; flex-direction:column; background: linear-gradient(145deg, #004d26, #007a3d, #00b36f); color:#e6fff2; }
+
+/* NAVBAR */
+.navbar { display:flex; justify-content:space-between; align-items:center; padding:15px 40px; background: rgba(0,0,0,0.4); backdrop-filter: blur(6px);}
+.logo { font-size:1.8rem; font-weight:700; color:#00ff80;}
+.navbar ul { display:flex; list-style:none; gap:25px;}
+.navbar a { text-decoration:none; color:#e6fff2; font-weight:500; transition:0.3s;}
+.navbar a:hover { color:#00ff80; text-shadow:0 0 8px #00ff80; }
+
+/* GENRE HERO */
+.genre-hero { text-align:center; padding:60px 20px;}
+.genre-hero h1 { font-size:2.5rem; margin-bottom:10px; color:#00ff80;}
+.genre-hero p { font-size:1rem; color:#e6fff2; }
+
+/* GENRES SECTION */
+.genre-section { padding:40px 20px;}
+.genre-section h2 { color:#00ff80; margin-bottom:20px;}
+.genre-container { display:flex; gap:20px; overflow-x:auto; padding-bottom:10px;}
+.genre-card { min-width:150px; text-align:center; cursor:pointer; flex-shrink:0; transition:0.3s;}
+.genre-card img { width:150px; height:150px; border-radius:12px; object-fit:cover; margin-bottom:5px; border:2px solid #00ff80;}
+.genre-card:hover { transform:scale(1.05); box-shadow:0 0 15px #00ff80;}
+.genre-card p { color:#e6fff2; font-weight:500; }
+
+/* PLAYER FOOTER */
+.player { margin-top:auto; background: rgba(0,0,0,0.6); display:flex; justify-content:space-between; align-items:center; padding:12px 30px; backdrop-filter: blur(8px);}
+.track-info { display:flex; align-items:center; gap:12px;}
+.track-info img { width:50px; height:50px; border-radius:10px;}
+.track-info h4 { margin-bottom:4px; color:#00ff80;}
+.controls, .player-controls { display:flex; gap:20px;}
+.player-controls button { background:#007a3d; border:none; color:#fff; font-size:22px; border-radius:50%; width:55px; height:55px; cursor:pointer; transition:all 0.3s;}
+.player-controls button:hover { transform:scale(1.1); background:#00b36f; box-shadow:0 0 15px #00ff80;}
+.progress-container { width:200px;}
+#progress-bar { width:100%; accent-color:#00ff80; }
+
+/* SCROLLBAR */
+.genre-container::-webkit-scrollbar { height:8px; }
+.genre-container::-webkit-scrollbar-thumb { background:#00ff80; border-radius:4px; }
