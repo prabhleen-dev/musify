@@ -1,0 +1,38 @@
+<section class="playlist-section">
+    <h2>Playlists</h2>
+    <div class="playlist-container">
+
+        <!-- Playlist Card -->
+        <div class="playlist-card">
+            <div class="playlist-header" onclick="togglePlaylist(this)">
+                <img src="images/album1.jpg.jpeg" alt="Playlist Cover">
+                <div>
+                    <h3>Chill Vibes</h3>
+                    <p>10 Songs</p>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="playlist-songs">
+                <div class="song" onclick="playSong('audio/audio1.mp3', 'Jo Tum Mere Ho', 'Anuv Jain', 'images/album1.jpg.jpeg')">Jo Tum Mere Ho - Anuv Jain</div>
+                <div class="song" onclick="playSong('audio/audio2.mp3', 'Wishes', 'Talwiinder', 'images/talwiinder.jpeg')">Wishes - Talwiinder</div>
+            </div>
+        </div>
+
+        <!-- Another Playlist Card -->
+        <div class="playlist-card">
+            <div class="playlist-header" onclick="togglePlaylist(this)">
+                <img src="images/download.jpeg" alt="Playlist Cover">
+                <div>
+                    <h3>Workout Hits</h3>
+                    <p>8 Songs</p>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="playlist-songs">
+                <div class="song" onclick="playSong('audio/audio3.mp3', 'Ehsaas', 'Faheem', 'images/ehsaas.jpeg')">Ehsaas - Faheem</div>
+                <div class="song" onclick="playSong('audio/audio4.mp3', 'High on you', 'Jind Universe', 'images/highonyou.jpg')">High on you- Jind Universe</div>
+            </div>
+        </div>
+
+    </div>
+</section>

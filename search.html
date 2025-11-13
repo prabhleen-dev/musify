@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TuneBox - Search</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+      <div class="logo">🎵 TuneBox</div>
+      <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="browse.html">Browse</a></li>
+          <li><a href="playlist.html">Your Library</a></li>
+          <li><a href="search.html" class="active">Search</a></li>
+      </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+      <header>
+          <h1>Search Songs</h1>
+          <input type="text" placeholder="Search songs..." id="searchInput" class="search-bar" onkeyup="filterSongs()">
+      </header>
+
+      <div class="playlist-cards playlist-songs" id="songContainer">
+          <div class="card" data-title="Cherry Beats">
+              <img src="images/album1.jpg" alt="Song 1">
+              <h3>Cherry Beats</h3>
+              <p>Artist A</p>
+          </div>
+          <div class="card" data-title="Red Vibes">
+              <img src="images/album2.jpg" alt="Song 2">
+              <h3>Red Vibes</h3>
+              <p>Artist B</p>
+          </div>
+          <div class="card" data-title="Love Tracks">
+              <img src="images/album3.jpg" alt="Song 3">
+              <h3>Love Tracks</h3>
+              <p>Artist C</p>
+          </div>
+      </div>
+  </div>
+
+  <!-- Player Bar -->
+  <div class="player-bar">
+      <img src="images/album1.jpg" alt="Now Playing" class="song-img">
+      <div class="song-info">
+          <h4>Cherry Beats</h4>
+          <p>Various Artists</p>
+      </div>
+      <div class="player-controls">
+          <button onclick="prevSong()">⏮</button>
+          <button onclick="playPause()">▶️</button>
+          <button onclick="nextSong()">⏭</button>
+      </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
