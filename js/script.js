@@ -85,3 +85,67 @@ function playSong(file,title,artist,img){
 
 // ===== INITIAL LOAD =====
 loadSong(songs[songIndex]);
+
+
+// ELEMENTS
+const audio = document.getElementById('audio-player');
+const playPauseBtn = document.getElementById('play-pause');
+const nextBtn = document.getElementById('next');
+const prevBtn = document.getElementById('prev');
+const progressBar = document.getElementById('progress-bar');
+const currentSongName = document.getElementById('current-song');
+const currentArtist = document.getElementById('current-artist');
+const albumArt = document.getElementById('current-album-art');
+const startBtn = document.getElementById('start-btn');
+
+// SONGS
+const songs = [
+  {name:"Jo Tum Mere Ho", artist:"Anuv Jain", src:"audio/audio1.mp3", img:"images/album1.jpg.jpeg"},
+  {name:"Wishes", artist:"Talwiinder", src:"audio/audio2.mp3", img:"images/talwiinder.jpeg"},
+  // Add other songs...
+];
+
+let songIndex = 0;
+let isPlaying = false;
+
+function loadSong(song){
+  currentSongName.textContent = song.name;
+  currentArtist.textContent = song.artist;
+  albumArt.src = song.img;
+  audio.src = song.src;
+}
+
+function playPause(){
+  const icon = playPauseBtn.querySelector("i");
+  if(isPlaying){ audio.pause(); icon.classList.replace("fa-pause","fa-play"); isPlaying=false; }
+  else{ audio.play(); icon.classList.replace("fa-play","fa-pause"); isPlaying=true; }
+}
+
+function nextSong(){ songIndex = (songIndex+1)%songs.length; loadSong(songs[songIndex]); audio.play(); isPlaying=true; playPauseBtn.querySelector("i").classList.replace("fa-play","fa-pause"); }
+function prevSong(){ songIndex = (songIndex-1+songs.length)%songs.length; loadSong(songs[songIndex]); audio.play(); isPlaying=true; playPauseBtn.querySelector("i").classList.replace("fa-play","fa-pause"); }
+
+audio.addEventListener('timeupdate', ()=>{
+  const progress = (audio.currentTime/audio.duration)*100;
+  progressBar.value = progress || 0;
+});
+
+progressBar.addEventListener('input', ()=>{ audio.currentTime=(progressBar.value/100)*audio.duration; });
+audio.addEventListener('ended', nextSong);
+
+startBtn.addEventListener('click', ()=>{
+  document.querySelector('.album-section').scrollIntoView({behavior:'smooth'});
+  if(!isPlaying) playPause();
+});
+
+function playSong(file,title,artist,img){
+  audio.src=file; audio.play();
+  currentSongName.textContent=title;
+  currentArtist.textContent=artist;
+  albumArt.src=img;
+  const icon = playPauseBtn.querySelector("i");
+  icon.classList.replace("fa-play","fa-pause");
+  isPlaying=true;
+}
+
+// INITIAL LOAD
+loadSong(songs[songIndex]);
