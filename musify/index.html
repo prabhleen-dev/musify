@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musify | Deep Cosmic Purple</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/album1.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar">
+        <div class="logo">🎧 Musify</div>
+        <nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="playlist.html">Playlists</a></li>
+   
+    <li><a href="artist.html">Artists</a></li>
+    <li><a href="genre.html">Genres</a></li>
+    <li><a href="search.html">Search</a></li>
+  </ul>
+</nav>
+
+    </header>
+
+    <! ===== HERO ===== -->
+    <main>
+        <section class="hero">
+            <h1>Feel the Beat, Live the Moment</h1>
+            <p>Your favorite music. Anytime. Anywhere.</p>
+            <button id="start-btn">Start Listening</button>
+        </section>
+
+        <!- ===== ALBUM SECTION ===== -->
+        <section class="album-section">
+            <h2>Trending Albums</h2>
+            <div class="album-container" id="album-container">
+                <div class="album-card" onclick="playSong('audio/audio1.mp3','Jo Tum Mere Ho','Anuv Jain','images/album1.jpg.jpeg')">
+                    <img src="images/album1.jpg.jpeg" alt="Album 1">
+                    <h3>Jo Tum Mere Ho</h3>
+                    <p>Anuv Jain</p>
+                </div>
+                <div class="album-card" onclick="playSong('audio/audio2.mp3','Wishes','Talwiinder','images/talwiinder.jpeg')">
+                    <img src="images/talwiinder.jpeg" alt="Album 2">
+                    <h3>Wishes</h3>
+                    <p>Talwiinder</p>
+                </div>
+                <div class="album-card" onclick="playSong('audio/audio3.mp3','Ehsaas','Faheem','images/ehsaas.jpeg')">
+                    <img src="images/ehsaas.jpeg" alt="Album 2">
+                    <h3>Ehsaas</h3>
+                    <p>Faheem</p>
+                </div>
+                <div class="album-card" onclick="playSong('audio/audio4.mp3','High On You','Jind Universe','images/highonyou.jpg')">
+                    <img src="images/highonyou.jpg" alt="Album 2">
+                    <h3>High On You</h3>
+                    <p>Jind Universe</p>
+                </div>
+                <div class="album-card" onclick="playSong('audio/audio5.mp3','Boyfriend','Karan Aujla','images/Boyfriend.jpg')">
+                    <img src="images/Boyfriend.jpg" alt="Album 2">
+                    <h3>Boyfriend</h3>
+                    <p>Karan Aujla</p>
+                </div>
+                <div class="album-card" onclick="playSong('audio/audio6.mp3','For A Reason','Karan Aujla','images/For A Reason.jpg')">
+                    <img src="images/For A Reason.jpg" alt="Album 2">
+                    <h3>For A Reason</h3>
+                    <p>Karan Aujla</p>
+                </div>
+                <div class="album-card" onclick="playSong('audio/audio7.mp3','Humsafar','Sachet Tandon, Parampara Tandon, Irshad Kamil','images/humsafar.jpg')">
+                    <img src="images/humsafar.jpg" alt="Album 2">
+                    <h3>Humsafar</h3>
+                    <p>Sachet Tandon, Parampara Tandon, Irshad Kamil</p>
+                </div>
+                <div class="album-card" onclick="playSong('audio/audio8.mp3','MF Gabhru','Karan Aujla','images/MF Gabhru.jpg')">
+                    <img src="images/MF Gabhru.jpg" alt="Album 2">
+                    <h3>MF Gabhru</h3>
+                    <p>Karan Aujla</p>
+                </div>
+                <div class="album-card" onclick="playSong('audio/audio9.mp3','Jo Tere Sang','Mustafa Zahid','images/Jo Tere Sang.jpg')">
+                    <img src="images/Jo Tere Sang.jpg" alt="Album 2">
+                    <h3>Jo Tere Sang</h3>
+                    <p>Mustafa Zahid</p>
+                </div>
+                <div class="album-card" onclick="playSong('audio/audio10.mp3','Kamlee','SARRB','images/Kamlee.jpg')">
+                    <img src="images/Kamlee.jpg" alt="Album 2">
+                    <h3>Kamlee</h3>
+                    <p>SARRB</p>
+                </div>
+                <div class="album-card" onclick="playSong('audio/audio11.mp3','Yeh Fitoor Mera','Amit Trivedi, Arjit Singh','images/Yeh Fitoor Mera.jpeg')">
+                    <img src="images/Yeh Fitoor Mera.jpg" alt="Album 2">
+                    <h3>Yeh Fitoor Mera</h3>
+                    <p>Amit Trivedi, Arjit Singh</p>
+                </div>
+
+            </div>
+        </section>
+
+        <! ===== PLAYLIST SECTION ===== -->
+        <section class="playlist-section">
+            <h2>Playlists</h2>
+            <div class="playlist-container">
+                <div class="playlist-card">
+                    <div class="playlist-header" onclick="togglePlaylist(this)">
+                        <img src="images/download.jpeg" alt="Playlist Cover">
+                        <div>
+                            <h3>Patakha</h3>
+                            <p>2 Songs</p>
+                        </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="playlist-songs">
+                        <div class="song" onclick="playSong('audio/audio1.mp3','Jo Tum Mere Ho','Anuv Jain','images/album1.jpg.jpeg')">Jo Tum Mere Ho - Anuv Jain</div>
+                        <div class="song" onclick="playSong('audio/audio2.mp3','Wishes','Talwiinder','images/talwiinder.jpeg')">Wishes - Talwiinder</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <! ===== PLAYER FOOTER ===== -->
+    <footer class="player">
+        <div class="track-info">
+            <img src="images/album1.jpg.jpeg" alt="Current Song" id="current-album-art">
+            <div>
+                <h4 id="current-song">Song Title</h4>
+                <p id="current-artist">Artist</p>
+            </div>
+        </div>
+
+        <div class="player-controls">
+            <button id="prev"><i class="fa-solid fa-backward-step"></i></button>
+            <button id="play-pause"><i class="fa-solid fa-play"></i></button>
+            <button id="next"><i class="fa-solid fa-forward-step"></i></button>
+            <button id="repeat"><i class="fa-solid fa-repeat"></i></button>
+        </div>
+
+        <div class="progress-container">
+            <input type="range" id="progress-bar" value="0">
+        </div>
+
+        <audio id="audio-player" src="audio/audio1.mp3"></audio>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+

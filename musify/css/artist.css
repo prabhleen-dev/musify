@@ -1,0 +1,52 @@
+/* GLOBAL RESET */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+body { min-height:100vh; background: linear-gradient(145deg, #2b0000, #5c0000, #a60000); color:#ffe6e6; display:flex; flex-direction:column; }
+
+/* NAVBAR */
+.navbar { display:flex; justify-content:space-between; align-items:center; padding:15px 40px; background: rgba(0,0,0,0.6); backdrop-filter: blur(6px);}
+.logo { font-size:1.8rem; font-weight:700; color:#ff2b2b;}
+.navbar ul { display:flex; list-style:none; gap:25px;}
+.navbar a { text-decoration:none; color:#ffe6e6; font-weight:500; transition:0.3s;}
+.navbar a:hover { color:#ff2b2b; text-shadow:0 0 10px #ff2b2b; }
+
+/* ARTIST HERO */
+.artist-hero { text-align:center; padding:60px 20px;}
+.artist-hero img { width:180px; height:180px; border-radius:50%; object-fit:cover; border:3px solid #ff2b2b; margin-bottom:15px;}
+.artist-hero h1 { font-size:2.5rem; margin-bottom:5px;}
+.artist-hero p { margin-bottom:15px;}
+.follow-btn { background:#ff2b2b; border:none; padding:10px 25px; border-radius:25px; color:#fff; cursor:pointer; font-weight:600; transition:0.3s;}
+.follow-btn:hover { background:#ff6666; transform:scale(1.05); }
+
+/* TOP TRACKS */
+.artist-top-tracks, .artist-albums, .artist-bio { padding:40px 20px;}
+.artist-top-tracks h2, .artist-albums h2, .artist-bio h2 { margin-bottom:20px; color:#ff2b2b;}
+.track-container { display:flex; gap:15px; overflow-x:auto; padding-bottom:10px;}
+.track-card { min-width:150px; text-align:center; cursor:pointer; transition:0.3s; flex-shrink:0;}
+.track-card img { width:150px; height:150px; border-radius:12px; object-fit:cover; margin-bottom:5px;}
+.track-card:hover { transform:scale(1.05); box-shadow:0 0 15px #ff2b2b;}
+.track-card p { font-size:0.9rem; color:#ffe6e6; }
+
+/* ALBUMS */
+.album-container { display:flex; gap:20px; overflow-x:auto; padding-bottom:10px;}
+.album-card { min-width:180px; text-align:center; flex-shrink:0; transition:0.3s;}
+.album-card img { width:100%; height:180px; border-radius:12px; object-fit:cover;}
+.album-card:hover { transform:translateY(-5px); box-shadow:0 0 15px #ff2b2b;}
+.album-card p { margin-top:5px; color:#ffe6e6; }
+
+/* BIO */
+.artist-bio p { max-width:800px; margin:0 auto; line-height:1.6; color:#ffd6d6; }
+
+/* PLAYER FOOTER */
+.player { margin-top:auto; background: rgba(0,0,0,0.8); display:flex; justify-content:space-between; align-items:center; padding:12px 30px; backdrop-filter: blur(8px);}
+.track-info { display:flex; align-items:center; gap:12px;}
+.track-info img { width:50px; height:50px; border-radius:10px;}
+.track-info h4 { margin-bottom:4px; color:#ff2b2b;}
+.controls, .player-controls { display:flex; gap:20px;}
+.player-controls button { background:#5c0000; border:none; color:#fff; font-size:22px; border-radius:50%; width:55px; height:55px; cursor:pointer; transition:all 0.3s;}
+.player-controls button:hover { transform:scale(1.1); background:#a60000; box-shadow:0 0 15px #ff2b2b;}
+.progress-container { width:200px;}
+#progress-bar { width:100%; accent-color:#ff2b2b;}
+
+/* SCROLLBAR */
+.track-container::-webkit-scrollbar, .album-container::-webkit-scrollbar {height:8px;}
+.track-container::-webkit-scrollbar-thumb, .album-container::-webkit-scrollbar-thumb {background:#ff2b2b; border-radius:4px;}

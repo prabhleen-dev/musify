@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musify | Search</title>
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="icon" type="image/png" href="images/album1.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">🎧 Musify</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="playlist.html">Playlists</a></li>
+                <li><a href="album.html">Albums</a></li>
+                <li><a href="artist.html">Artists</a></li>
+                <li><a href="genre.html">Genres</a></li>
+                <li><a href="search.html">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SEARCH HERO -->
+    <section class="search-hero">
+        <h1>Find Your Favorite Music</h1>
+        <input type="text" id="search-input" placeholder="Search songs, albums, artists..." />
+    </section>
+
+    <!-- SEARCH RESULTS -->
+    <section class="search-results">
+        <h2>Results</h2>
+        <div id="results-container">
+            <!-- Populated dynamically -->
+        </div>
+    </section>
+
+    <!-- PLAYER FOOTER -->
+    <footer class="player">
+        <div class="track-info">
+            <img src="images/album1.jpg" alt="Current Song" id="current-album-art">
+            <div>
+                <h4 id="current-song">Song Title</h4>
+                <p id="current-artist">Artist</p>
+            </div>
+        </div>
+
+        <div class="player-controls">
+            <button id="prev"><i class="fa-solid fa-backward-step"></i></button>
+            <button id="play-pause"><i class="fa-solid fa-play"></i></button>
+            <button id="next"><i class="fa-solid fa-forward-step"></i></button>
+        </div>
+
+        <div class="progress-container">
+            <input type="range" id="progress-bar" value="0">
+        </div>
+
+        <audio id="audio-player" src="audio/audio1.mp3"></audio>
+    </footer>
+
+    <script src="js/search.js"></script>
+</body>
+</html>
