@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musify | Playlists</title>
+  <link rel="stylesheet" href="css/playlist.css">
+  <link rel="icon" type="image/png" href="images/album1.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">🎧 Musify</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="playlist.html" class="active">Playlists</a></li>
+        <li><a href="artist.html">Artist</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="genre.html">Genres</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PLAYLIST SECTION -->
+  <main class="playlist-main">
+    <h1>Featured Playlists</h1>
+    <div class="playlist-grid">
+
+      <!-- Playlist 1 -->
+      <div class="playlist-card" onclick="openPlaylist('chill')">
+        <img src="images/album1.jpg" alt="Chill Vibes">
+        <h3>Chill Vibes</h3>
+        <p>Relax. Unwind. Enjoy.</p>
+      </div>
+
+      <!-- Playlist 2 -->
+      <div class="playlist-card" onclick="openPlaylist('workout')">
+        <img src="images/download.jpeg" alt="Workout Mix">
+        <h3>Workout Mix</h3>
+        <p>Energy that never stops.</p>
+      </div>
+
+      <!-- Playlist 3 -->
+      <div class="playlist-card" onclick="openPlaylist('romance')">
+        <img src="images/romance.jpg" alt="Romantic Tunes">
+        <h3>Romantic Tunes</h3>
+        <p>Love in every beat.</p>
+      </div>
+
+    </div>
+
+    <!-- Playlist Details Section (hidden until opened) -->
+    <section id="playlist-details" class="hidden">
+      <h2 id="playlist-title">Playlist Name</h2>
+      <div id="song-list"></div>
+    </section>
+  </main>
+
+  <!-- PLAYER FOOTER -->
+  <footer class="player">
+    <div class="track-info">
+      <img src="images/album1.jpg" alt="Current Song" id="current-album-art">
+      <div>
+        <h4 id="current-song">Song Title</h4>
+        <p id="current-artist">Artist</p>
+      </div>
+    </div>
+
+    <div class="player-controls">
+      <button id="prev"><i class="fa-solid fa-backward-step"></i></button>
+      <button id="play-pause"><i class="fa-solid fa-play"></i></button>
+      <button id="next"><i class="fa-solid fa-forward-step"></i></button>
+    </div>
+
+    <div class="progress-container">
+      <input type="range" id="progress-bar" value="0">
+    </div>
+
+    <audio id="audio-player"></audio>
+  </footer>
+
+  <script src="js/playlist.js"></script>
+</body>
+</html>

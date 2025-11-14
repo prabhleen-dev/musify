@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musify | Artist</title>
+    <link rel="stylesheet" href="css/artist.css">
+    <link rel="icon" type="image/png" href="images/album1.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">🎧 Musify</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="playlist.html">Playlists</a></li>
+                <li><a href="album.html">Albums</a></li>
+                <li><a href="artist.html">Artists</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ARTIST HERO -->
+    <section class="artist-hero">
+        <img src="images/artist1.jpg" alt="Artist Name">
+        <h1>Cherry Red</h1>
+        <p>Pop | Followers: 1.5M</p>
+        <button class="follow-btn">Follow</button>
+    </section>
+
+    <!-- TOP TRACKS -->
+    <section class="artist-top-tracks">
+        <h2>Top Tracks</h2>
+        <div class="track-container">
+            <div class="track-card" onclick="playSong('audio/audio1.mp3','Song One','Cherry Red','images/artist1.jpg')">
+                <img src="images/artist1.jpg" alt="Song One">
+                <p>Song One</p>
+            </div>
+            <div class="track-card" onclick="playSong('audio/audio2.mp3','Song Two','Cherry Red','images/artist1.jpg')">
+                <img src="images/artist1.jpg" alt="Song Two">
+                <p>Song Two</p>
+            </div>
+            <!-- Add more tracks here -->
+        </div>
+    </section>
+
+    <!-- ALBUMS -->
+    <section class="artist-albums">
+        <h2>Albums</h2>
+        <div class="album-container">
+            <div class="album-card">
+                <img src="images/album1.jpg" alt="Album One">
+                <p>Album One (2023)</p>
+            </div>
+            <div class="album-card">
+                <img src="images/album2.jpg" alt="Album Two">
+                <p>Album Two (2022)</p>
+            </div>
+            <!-- Add more albums here -->
+        </div>
+    </section>
+
+    <!-- BIO -->
+    <section class="artist-bio">
+        <h2>About</h2>
+        <p>Cherry Red is a pop sensation known for catchy hooks and vibrant live performances. With millions of fans worldwide, her music is energetic, heartfelt, and unforgettable.</p>
+    </section>
+
+    <!-- PLAYER FOOTER -->
+    <footer class="player">
+        <div class="track-info">
+            <img src="images/album1.jpg" alt="Current Song" id="current-album-art">
+            <div>
+                <h4 id="current-song">Song Title</h4>
+                <p id="current-artist">Artist</p>
+            </div>
+        </div>
+
+        <div class="player-controls">
+            <button id="prev"><i class="fa-solid fa-backward-step"></i></button>
+            <button id="play-pause"><i class="fa-solid fa-play"></i></button>
+            <button id="next"><i class="fa-solid fa-forward-step"></i></button>
+        </div>
+
+        <div class="progress-container">
+            <input type="range" id="progress-bar" value="0">
+        </div>
+
+        <audio id="audio-player" src="audio/audio1.mp3"></audio>
+    </footer>
+
+    <script src="js/artist.js"></script>
+</body>
+</html>
